@@ -20,9 +20,7 @@ public class FolderStructure
         for(int j=0; j<photoDates.size();j++)
         {
             String[] arrList = photoDates.get(j).split("-");
-            System.out.println(arrList[0]+" "+arrList[1]+" "+arrList[2]);
             String monthText = arrList[0];
-            System.out.println(arrList[2]+" "+years.containsKey(arrList[2]));
             if(years.containsKey(arrList[2]))
             {
                 if(years.get(arrList[2]).containsKey(monthText))
