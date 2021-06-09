@@ -5,10 +5,10 @@ public class FolderStructure
 {
     public static void main(String[] args) {
         File folder = new File("imagesTest");
-		File[] listOfFiles = folder.listFiles();
+	File[] listOfFiles = folder.listFiles();
         SimpleDateFormat sdf = new SimpleDateFormat("MMM-dd-yyyy");
         ArrayList<String> photoDates = new ArrayList<>();
-		Map<String, Map<String,ArrayList<String>>> years = new HashMap<String,Map<String,ArrayList<String>>>();
+	Map<String, Map<String,ArrayList<String>>> years = new HashMap<String,Map<String,ArrayList<String>>>();
         int startIdx=0;
         for (File file : listOfFiles) 
         {
