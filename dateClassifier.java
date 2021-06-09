@@ -27,37 +27,19 @@ public class dateClassifier
             String path = yearPath+y;
             File f1 = new File(path);   
             boolean bool1 = f1.mkdir(); 
-            if(bool1)
-                {  
-                    System.out.println("Year Folder is created successfully");  
-                }
-            else
-                {     
-                    System.out.println("Year Already Found");  
-                } 
             Map<String,ArrayList<File>> months = years.get(y);
             for(String s: months.keySet())
             {
                 String monthPath = path+"//"+s;
                 File f2 = new File(monthPath);
                 boolean bool2 = f2.mkdir(); 
-                String destPath = monthPath;
-                if(bool2)
-                    {  
-                        System.out.println("Month Folder is created successfully");  
-                    }
-                else
-                    {     
-                        System.out.println("Already Found");  
-                    }  
+                String destPath = monthPath;  
                 ArrayList<File> monthlyImages = months.get(s);
                 for(File fn: monthlyImages)
                 {
                     Path sourcepath = Paths.get(fn.getAbsolutePath());
                     String dPath = destPath+"//"+fn.getName();
                     Path destinationepath = Paths.get(dPath);
-                    System.out.println(sourcepath);
-                    System.out.println(destinationepath);
                     Path result = null;
                     try 
                     {
@@ -67,17 +49,8 @@ public class dateClassifier
                     {
                         System.out.println("Exception while moving file: " + e.getMessage());
                     }
-                    if(result != null) 
-                    {
-                        System.out.println("File moved successfully.");
-                    }
-                    else
-                    {
-                        System.out.println("File movement failed.");
-                    }
                 }
-            }
-                            
+            }               
         }
-   }  
+    }  
 }  
