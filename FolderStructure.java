@@ -8,7 +8,7 @@ public class FolderStructure
 	File[] listOfFiles = folder.listFiles();
         SimpleDateFormat sdf = new SimpleDateFormat("MMM-dd-yyyy");
         ArrayList<String> photoDates = new ArrayList<>();
-	Map<String, Map<String,ArrayList<String>>> years = new HashMap<String,Map<String,ArrayList<String>>>();
+	Map<String, Map<String,ArrayList<String>>> years = new HashMap<>();
         int startIdx=0;
         for (File file : listOfFiles) 
         {
