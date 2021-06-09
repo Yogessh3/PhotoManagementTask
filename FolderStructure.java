@@ -36,8 +36,9 @@ public class FolderStructure
             }
             else
             {
-                ArrayList<String> Images = new ArrayList<>();
-                years.put(arrList[2],new HashMap<String, ArrayList<String>>());
+                Map<String, ArrayList<String>> MonthMap = new HashMap<>();
+                years.put(arrList[2],MonthMap);
+		ArrayList<String> Images = new ArrayList<>();
                 Images.add(listOfFiles[startIdx].getName());
                 years.get(arrList[2]).put(monthText,Images);
             }      
