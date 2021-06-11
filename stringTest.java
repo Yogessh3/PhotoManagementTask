@@ -33,7 +33,7 @@ public class stringTest {
           }
           if(sdfMonth.format(f.lastModified()).contains(year))
           {
-              yearResults.add(f.getName());
+              yearResults.add(f.getPath());
           }
       }
       return null;
